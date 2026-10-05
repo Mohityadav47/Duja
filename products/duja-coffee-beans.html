@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="#0b2b4d" name="theme-color"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DUJA Coffee Beans — محاصيل دُجى</title>
+<meta content="DUJA Coffee Beans — Enab, Geisha, DUJA Signature Coffee, Catalina, Haraz, Sado, KitKat and Coconut." name="description"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f8fc;color:#10243d;line-height:1.55}
+:root{--blue:#1f5fa8;--deep:#0b2b4d;--soft:#eaf3fb;--line:#d8e5f1;--paper:#fff;--muted:#60778f}
+a{text-decoration:none;color:inherit}
+.hero{min-height:600px;position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 78% 45%,rgba(31,95,168,.85) 0,rgba(31,95,168,0) 48%),linear-gradient(90deg,#07192b,#0b2b4d 55%,#123f70)}
+/* .hero:before{content:"";position:absolute;right:3%;top:54%;width:520px;height:520px;transform:translateY(-50%);background:url("/images/milk-based-hero.png") center/contain no-repeat;opacity:.34} */
+.hero{
+        background:
+      linear-gradient(90deg,rgba(12,8,5,.84) 0%,rgba(12,8,5,.57) 38%,rgba(12,8,5,.2) 72%,rgba(12,8,5,.4) 100%),
+      url("/images/herrro.png") center/cover no-repeat;
+}
+
+
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:170px;background:linear-gradient(transparent,#f4f8fc);z-index:1}
+nav{height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid rgba(255,255,255,.22);background:transparent;position:relative;z-index:10}
+.logo{display:flex;align-items:center;gap:10px;color:#fff}.logo img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:1px solid rgba(255,255,255,.55)}
+.logo strong{display:block;font-size:20px;letter-spacing:1px}.logo span{display:block;font-size:9px;letter-spacing:2.5px;opacity:.8;text-transform:uppercase}
+.navlinks{display:flex;align-items:center;gap:30px;font-size:14px}.navlinks a{color:#fff;opacity:.95}.navlinks a:hover{opacity:1;color:#cfe6fb}.nav-btn{padding:10px 17px;border:1px solid rgba(255,255,255,.55);border-radius:999px}.menu-btn{display:none;background:none;border:0;color:#fff;font-size:28px}
+.hero-content{max-width:1180px;margin:auto;padding:90px 7% 150px;position:relative;z-index:2}.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#b9d9f5;margin-bottom:15px}.hero h1{font-family:Georgia,serif;font-size:clamp(48px,7vw,84px);line-height:.98;max-width:760px;margin-bottom:22px}.hero-ar{font-size:clamp(20px,2.5vw,30px);font-weight:500;opacity:.9;direction:rtl;text-align:left;display:block;margin-top:18px}.hero-copy{max-width:610px;color:#eaf4fc;font-size:17px}
+main{position:relative;z-index:3}.intro{max-width:1180px;margin:-70px auto 0;padding:0 7%;position:relative;z-index:4}.intro-box{background:rgba(255,255,255,.92);border:1px solid rgba(31,95,168,.12);box-shadow:0 22px 60px rgba(11,43,77,.10);border-radius:24px;padding:28px 32px;display:flex;justify-content:space-between;align-items:center;gap:25px}.intro-title{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);font-weight:800}.intro-copy{font-size:15px;color:var(--muted);margin-top:4px}.hours{white-space:nowrap;padding:12px 17px;border-radius:999px;background:var(--soft);color:var(--deep);font-weight:700;font-size:13px}
+.products{max-width:1180px;margin:72px auto 100px;padding:0 7%}.section-head{text-align:center;margin-bottom:42px}.section-kicker{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:4px;text-transform:uppercase}.section-head h2{font-family:Georgia,serif;font-size:clamp(38px,5vw,58px);color:var(--deep);margin:8px 0}.section-head .ar{font-size:20px;direction:rtl;display:block;color:#45627b}.section-head p{max-width:610px;margin:12px auto 0;color:var(--muted)}.section-head p.p-ar{direction:rtl;margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 18px 55px rgba(11,43,77,.08);transition:transform .3s ease,box-shadow .3s ease}.card:hover{transform:translateY(-7px);box-shadow:0 28px 65px rgba(11,43,77,.14)}
+.image-wrap{aspect-ratio:1/1;position:relative;overflow:hidden;background:linear-gradient(135deg,#dbeaf7,#f7fbff)}.image-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}.card:hover .image-wrap img{transform:scale(1.035)}.image-placeholder{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#4e7191;letter-spacing:3px;text-transform:uppercase;background:radial-gradient(circle at 50% 42%,#fff 0,#edf5fb 45%,#d9e8f5 100%)}.image-placeholder strong{font-family:Georgia,serif;font-size:42px;letter-spacing:1px;color:var(--deep);text-transform:none;text-align:center;padding:0 20px}.image-placeholder span{font-size:11px;margin-top:8px}.badge{position:absolute;top:20px;left:20px;background:rgba(255,255,255,.92);color:var(--blue);font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:9px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.card-body{padding:28px 28px 30px;flex:1;display:flex;flex-direction:column}.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.product-title h3{font-family:Georgia,serif;font-size:31px;color:var(--deep);line-height:1.08}.product-title .arabic{display:block;direction:rtl;text-align:left;font-size:18px;color:#526f88;margin-top:8px;font-weight:600}.price{font-size:25px;color:var(--blue);font-weight:800;white-space:nowrap}
+.uses{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.uses span{background:var(--soft);color:var(--deep);border-radius:999px;padding:7px 13px;font-size:12px;font-weight:700}
+.desc{margin:19px 0;color:#506a81;font-size:15px}.desc-ar{direction:rtl;text-align:right;color:#6a7f92;font-size:14px;line-height:1.9;margin-top:-10px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:auto 0 0;padding-top:20px}.stat{border:1px solid var(--line);background:#f8fbfe;border-radius:15px;padding:13px 14px}.stat b{display:block;color:var(--deep);font-size:16px}.stat b em{display:block;font-style:normal;font-weight:600;font-size:14px;color:#526f88;direction:rtl;text-align:left;margin-top:2px}.stat span{display:block;font-size:11px;color:#71879a;letter-spacing:.4px;margin-top:6px}
+.footer{background:var(--deep);color:#dceafa;padding:60px 7% 28px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:40px}.footer h4{color:#fff;margin-bottom:12px}.footer p{color:#aac1d5;font-size:13px}.back{display:inline-flex;margin-top:22px;color:#a9d4f7;font-size:13px}.copyright{max-width:1180px;margin:35px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#8da8be}
+@media(max-width:850px){nav{height:72px;padding:0 5%}.logo img{width:42px;height:42px}.logo strong{font-size:17px}.logo span{font-size:7px}.navlinks{display:none}.menu-btn{display:block}.hero{min-height:540px}.hero:before{width:420px;height:420px;right:-22%;opacity:.2}.hero-content{padding:78px 7% 135px}.hero h1{font-size:52px}.intro{margin:-55px auto 0;padding:0 5%}.intro-box{padding:22px;align-items:flex-start;flex-direction:column}.hours{white-space:normal}.products{padding:0 5%;margin-top:58px}.grid{grid-template-columns:1fr}.card-body{padding:23px}.card-top{flex-direction:column}.price{font-size:23px}.footer-inner{flex-direction:column}}
+@media(max-width:480px){.hero h1{font-size:45px}.hero-ar{font-size:18px}.product-title h3{font-size:28px}.product-title .arabic{font-size:17px}.image-placeholder strong{font-size:32px}.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<section class="hero">
+<div id="global-nav"></div>
+<div class="hero-content">
+<div class="eyebrow">DUJA COFFEE BEANS</div>
+<h1>Beans, chosen with care.<span class="hero-ar">محاصيل مختارة بعناية فائقة</span></h1>
+<p class="hero-copy">A selection of carefully curated coffee beans, each offering its own unique flavor notes — from bright and fruity to sweet and chocolatey.</p>
+</div>
+</section>
+<main>
+<section class="intro"><div class="intro-box"><div><div class="intro-title">Coffee Beans Collection</div><div class="intro-copy">Eight coffees, each with its own process and flavor notes.</div></div><div class="hours">8 coffees | ٨ محاصيل</div></div></section>
+<section class="products" id="products">
+<div class="section-head"><div class="section-kicker">Coffee Beans</div><h2>DUJA Coffee Beans</h2><span class="ar">محاصيل دُجى</span><p>A selection of carefully curated coffee beans, each offering its own unique flavor notes.</p><p class="p-ar">محاصيل متنوعة بإيحاءات مختلفة، مختارة بعناية فائقة.</p></div>
+<div class="grid">
+<article class="card">
+<div class="image-wrap"><img alt="Enab – Colombia" fetchpriority="high" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" src="/images/enab-colombia.jpg"/><div class="image-placeholder" style="display:none"><strong>Enab – Colombia</strong><span>Product image</span></div><div class="badge">Colombia</div></div>
+<div class="card-body"><div class="card-top"><div class="product-title"><h3>Enab – Colombia</h3><span class="arabic">عناب – كولومبي</span></div><div class="price">4.00</div></div>
+<div class="uses"><span>Pour Over | للمقطرة</span><span>Espresso | للإسبريسو</span></div>
+<p class="desc">A distinctly fruity Colombian coffee combining grape sweetness with berry notes, balanced acidity, and a smooth body.</p>
+<p class="desc-ar">محصول كولومبي بطابع فاكهي واضح، يجمع بين حلاوة العنب وإيحاءات التوت، بحمضية متوازنة وقوام ناعم.</p>
+<div class="stats"><div class="stat"><b>Infusion<em>انفيوجن</em></b><span>Process | المعالجة</span></div><div class="stat"><b>Grape – Berries – Sweetness<em>عنب – توت – حلاوة</em></b><span>Notes | الإيحاءات</span></div></div></div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Geisha – Costa Rica" fetchpriority="high" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" src="/images/geisha-costa-rica.jpg"/><div class="image-placeholder" style="display:none"><strong>Geisha – Costa Rica</strong><span>Product image</span></div><div class="badge">Costa Rica</div></div>
+<div class="card-body"><div class="card-top"><div class="product-title"><h3>Geisha – Costa Rica</h3><span class="arabic">قيشا – كوستاريكا</span></div><div class="price">6.00</div></div>
+<div class="uses"><span>Pour Over | للمقطرة</span></div>
+<p class="desc">A renowned coffee variety known for its rarity and exceptional quality, offering a distinct aromatic character with balanced fruity and citrus notes, a smooth body, and a clean finish.</p>
+<p class="desc-ar">سلالة رسّخت مكانتها بين نخبة محاصيل القهوة المختصة، اختيرت بعناية لما عُرفت به من ندرة وجودة استثنائية، بطابع عطري واضح ونكهات فاكهية وحمضية متوازنة، مع قوام ناعم ونهاية نظيفة.</p>
+<div class="stats"><div class="stat"><b>Anaerobic Natural<em>تجفيف لاهوائي</em></b><span>Process | المعالجة</span></div><div class="stat"><b>Floral – Berries – Cherry – Citrus – Jasmine<em>زهر – توت – كرز – حمضيات – ياسمين</em></b><span>Notes | الإيحاءات</span></div></div></div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="DUJA Signature Coffee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" src="/images/duja-signature.jpg"/><div class="image-placeholder" style="display:none"><strong>DUJA Signature Coffee</strong><span>Product image</span></div><div class="badge">Signature</div></div>
+<div class="card-body"><div class="card-top"><div class="product-title"><h3>DUJA Signature Coffee</h3><span class="arabic">محصول النخبة دُجى</span></div><div class="price">4.00</div></div>
+<div class="uses"><span>Espresso | للإسبريسو</span><span>Pour Over | للمقطرة</span><span>Milk-Based Drinks | لمشروبات الحليب</span></div>
+<p class="desc">The first sip begins with soft caramel sweetness, followed by juicy notes of plum and berries, finishing with the depth of black grape and a long, rich aftertaste.</p>
+<p class="desc-ar">تبدأ أول رشفة بحلاوة الكراميل الناعمة، ثم تظهر إيحاءات البرقوق والتوت بحدة خفيفة وعصيرية، وتستقر النهاية بعمق العنب الأسود ولمسة طويلة وغنية.</p>
+<div class="stats"><div class="stat"><b>Anaerobic Natural<em>تجفيف لاهوائي</em></b><span>Process | المعالجة</span></div><div class="stat"><b>Caramel – Plum – Berries – Black Grape<em>كراميل – برقوق – توت – عنب أسود</em></b><span>Notes | الإيحاءات</span></div></div></div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Catalina – Colombia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" src="/images/catalina-colombia.jpg"/><div class="image-placeholder" style="display:none"><strong>Catalina – Colombia</strong><span>Product image</span></div><div class="badge">Colombia</div></div>
+<div class="card-body"><div class="card-top"><div class="product-title"><h3>Catalina – Colombia</h3><span class="arabic">كاتلينا – كولومبي</span></div><div class="price">2.00</div></div>
+<div class="uses"><span>Pour Over Only | للمقطرة فقط</span></div>
+<p class="desc">A distinctly fruity Colombian coffee processed using the extended natural method, featuring notes of berries and red fruits.</p>
+<p class="desc-ar">محصول كولومبي بطابع فاكهي واضح، مصنوع بالتجفيف المطوّل، بإيحاءات التوت والفواكه الحمراء.</p>
+<div class="stats"><div class="stat"><b>Extended Natural<em>تجفيف مطوّل</em></b><span>Process | المعالجة</span></div><div class="stat"><b>Berries – Red Fruits<em>توت – فواكه حمراء</em></b><span>Notes | الإيحاءات</span></div></div></div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Haraz – Yemen" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" src="/images/haraz-yemen.jpg"/><div class="image-placeholder" style="display:none"><strong>Haraz – Yemen</strong><span>Product image</span></div><div class="badge">Yemen</div></div>
+<div class="card-body"><div class="card-top"><div class="product-title"><h3>Haraz – Yemen</h3><span class="arabic">حراز – اليمن</span></div><div class="price">5.00</div></div>
+<div class="uses"><span>Pour Over | للمقطرة</span></div>
+<p class="desc">A rich and complex cup combining distinct fruitiness with molasses sweetness, with intertwined, layered flavors and a warm almond finish.</p>
+<p class="desc-ar">نكهات غنية ومتعددة، تجمع بين الفاكهية الواضحة وحلاوة دبس السكر، مع تفاصيل متداخلة ولمسة لوز تمنح الكوب دفئًا وتميزًا.</p>
+<div class="stats"><div class="stat"><b>Natural<em>مجففة</em></b><span>Process | المعالجة</span></div><div class="stat"><b>Red Berries – Molasses – Red Apple – Kiwi – Almond<em>توت أحمر – دبس السكر – تفاح أحمر – كيوي – لوز</em></b><span>Notes | الإيحاءات</span></div></div></div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Sado – Ethiopia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" src="/images/sado-ethiopia.jpg"/><div class="image-placeholder" style="display:none"><strong>Sado – Ethiopia</strong><span>Product image</span></div><div class="badge">Ethiopia</div></div>
+<div class="card-body"><div class="card-top"><div class="product-title"><h3>Sado – Ethiopia</h3><span class="arabic">سادو – أثيوبي</span></div><!-- Price not listed in the PDF for this coffee --></div>
+<div class="uses"><span>Espresso | للإسبريسو</span><span>Pour Over | للمقطرة</span><span>Milk-Based Drinks | لمشروبات الحليب</span></div>
+<p class="desc">Moderate strawberry acidity balanced by the sweetness of blueberries and chocolate.</p>
+<p class="desc-ar">حموضة فراولة معتدلة، تتوازن مع حلاوة التوت الأزرق والشوكولاتة.</p>
+<div class="stats"><div class="stat"><b>Natural<em>مُجففة</em></b><span>Process | المعالجة</span></div><div class="stat"><b>Blueberry – Strawberry – Chocolate<em>توت أزرق – فراولة – شوكولاتة</em></b><span>Notes | الإيحاءات</span></div></div></div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="KitKat – Brazil" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" src="/images/kitkat-brazil.jpg"/><div class="image-placeholder" style="display:none"><strong>KitKat – Brazil</strong><span>Product image</span></div><div class="badge">Brazil</div></div>
+<div class="card-body"><div class="card-top"><div class="product-title"><h3>KitKat – Brazil</h3><span class="arabic">كتكات – البرازيل</span></div><div class="price">3.00</div></div>
+<div class="uses"><span>Pour Over Only | للمقطرة فقط</span></div>
+<p class="desc">A classic profile of chocolate and vanilla, complemented by subtle caramel and hazelnut notes for a delicate balance.</p>
+<p class="desc-ar">طابع كلاسيكي بنكهة الشوكولاتة والفانيليا، مع لمسة كراميل وبندق تمنح الكوب توازنًا دقيقًا.</p>
+<div class="stats"><div class="stat"><b>Infusion<em>إنفيوجن</em></b><span>Process | المعالجة</span></div><div class="stat"><b>Chocolate – Vanilla – Caramel – Hazelnut<em>شوكولاتة – فانيليا – كراميل – بندق</em></b><span>Notes | الإيحاءات</span></div></div></div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Coconut – Colombia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" src="/images/coconut-colombia.jpg"/><div class="image-placeholder" style="display:none"><strong>Coconut – Colombia</strong><span>Product image</span></div><div class="badge">Colombia</div></div>
+<div class="card-body"><div class="card-top"><div class="product-title"><h3>Coconut – Colombia</h3><span class="arabic">كوكنت – كولومبيا</span></div><div class="price">6.00</div></div>
+<div class="uses"><span>Pour Over | للمقطرة</span><span>Espresso | للإسبريسو</span><span>Milk-Based Drinks | لمشروبات الحليب</span></div>
+<p class="desc">A premium Colombian coffee where white chocolate blends with delicate coconut notes, finished with a smooth touch of vanilla.</p>
+<p class="desc-ar">محصول فاخر تتداخل فيه الشوكولاتة البيضاء مع لمسة جوز الهند، وتختمه الفانيليا بهدوء.</p>
+<div class="stats"><div class="stat"><b>Enhanced Natural<em>تجفيف معزّز</em></b><span>Process | المعالجة</span></div><div class="stat"><b>White Chocolate – Coconut – Vanilla<em>شوكولاتة بيضاء – جوز هند – فانيليا</em></b><span>Notes | الإيحاءات</span></div></div></div>
+</article>
+</div>
+</section>
+</main>
+<div id="global-footer"></div>
+
+<script src="../components.js"></script></body>
+</html>

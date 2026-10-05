@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="#0b2b4d" name="theme-color"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DUJA Desserts — الحلويات</title>
+<meta content="DUJA Desserts — premium desserts and sweet treats." name="description"/>
+
+
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f8fc;
+      color: #10243d;
+      line-height: 1.55
+    }
+
+    :root {
+      --blue: #1f5fa8;
+      --deep: #0b2b4d;
+      --soft: #eaf3fb;
+      --line: #d8e5f1;
+      --paper: #fff;
+      --muted: #60778f
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    .hero {
+      min-height: 600px;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background: linear-gradient(90deg, rgba(7, 25, 43, .90), rgba(11, 43, 77, .62) 46%, rgba(11, 43, 77, .18)), url("/images/desserts-hero\ \(2\).png") center/cover no-repeat
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 170px;
+      background: linear-gradient(transparent, #f4f8fc);
+      z-index: 1
+    }
+
+    nav {
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+      border-bottom: 1px solid rgba(255, 255, 255, .22);
+      background: transparent;
+      position: relative;
+      z-index: 10
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff
+    }
+
+    .logo img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .55)
+    }
+
+    .logo strong {
+      display: block;
+      font-size: 20px;
+      letter-spacing: 1px
+    }
+
+    .logo span {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      opacity: .8;
+      text-transform: uppercase
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 14px
+    }
+
+    .navlinks a {
+      color: #fff;
+      opacity: .95
+    }
+
+    .navlinks a:hover {
+      opacity: 1;
+      color: #cfe6fb
+    }
+
+    .nav-btn {
+      padding: 10px 17px;
+      border: 1px solid rgba(255, 255, 255, .55);
+      border-radius: 999px
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: #fff;
+      font-size: 28px
+    }
+
+    .hero-content {
+      max-width: 1180px;
+      margin: auto;
+      padding: 90px 7% 150px;
+      position: relative;
+      z-index: 2
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #b9d9f5;
+      margin-bottom: 15px
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(48px, 7vw, 84px);
+      line-height: .98;
+      max-width: 760px;
+      margin-bottom: 22px
+    }
+
+    .hero-ar {
+      font-size: clamp(20px, 2.5vw, 30px);
+      font-weight: 500;
+      opacity: .9;
+      direction: rtl;
+      display: block;
+      margin-top: 18px
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      color: #eaf4fc;
+      font-size: 17px
+    }
+
+    main {
+      position: relative;
+      z-index: 3
+    }
+
+    .intro {
+      max-width: 1180px;
+      margin: -70px auto 0;
+      padding: 0 7%;
+      position: relative;
+      z-index: 4
+    }
+
+    .intro-box {
+      background: rgba(255, 255, 255, .92);
+      border: 1px solid rgba(31, 95, 168, .12);
+      box-shadow: 0 22px 60px rgba(11, 43, 77, .10);
+      border-radius: 24px;
+      padding: 28px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px
+    }
+
+    .intro-title {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 800
+    }
+
+    .intro-copy {
+      font-size: 15px;
+      color: var(--muted);
+      margin-top: 4px
+    }
+
+    .hours {
+      white-space: nowrap;
+      padding: 12px 17px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--deep);
+      font-weight: 700;
+      font-size: 13px
+    }
+
+    .products {
+      max-width: 1180px;
+      margin: 72px auto 100px;
+      padding: 0 7%
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 42px
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase
+    }
+
+    .section-head h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      color: var(--deep);
+      margin: 8px 0
+    }
+
+    .section-head .ar {
+      font-size: 20px;
+      direction: rtl;
+      display: block;
+      color: #45627b
+    }
+
+    .section-head p {
+      max-width: 610px;
+      margin: 12px auto 0;
+      color: var(--muted)
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 18px 55px rgba(11, 43, 77, .08);
+      transition: transform .3s ease, box-shadow .3s ease
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 28px 65px rgba(11, 43, 77, .14)
+    }
+
+    .image-wrap {
+      height: 390px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #dbeaf7, #f7fbff)
+    }
+
+    .image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .6s ease
+    }
+
+    .card:hover .image-wrap img {
+      transform: scale(1.035)
+    }
+
+    .image-placeholder {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #4e7191;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      background: radial-gradient(circle at 50% 42%, #fff 0, #edf5fb 45%, #d9e8f5 100%)
+    }
+
+    .image-placeholder strong {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      letter-spacing: 1px;
+      color: var(--deep);
+      text-transform: none
+    }
+
+    .image-placeholder span {
+      font-size: 11px;
+      margin-top: 8px
+    }
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, .92);
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 9px 12px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .08)
+    }
+
+    .card-body {
+      padding: 28px 28px 30px
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 15px
+    }
+
+    .product-title h3 {
+      font-family: Georgia, serif;
+      font-size: 31px;
+      color: var(--deep);
+      line-height: 1.08
+    }
+
+    .product-title .arabic {
+      display: block;
+      direction: rtl;
+      text-align: left;
+      font-size: 18px;
+      color: #526f88;
+      margin-top: 8px;
+      font-weight: 600
+    }
+
+    .price {
+      font-size: 25px;
+      color: var(--blue);
+      font-weight: 800;
+      white-space: nowrap
+    }
+
+    .desc {
+      margin: 19px 0;
+      color: #506a81;
+      font-size: 15px
+    }
+
+    .desc-ar {
+      direction: rtl;
+      text-align: right;
+      color: #6a7f92;
+      font-size: 14px;
+      line-height: 1.9;
+      margin-top: -10px;
+      margin-bottom: 20px
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 18px 0
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      background: #f8fbfe;
+      border-radius: 15px;
+      padding: 13px 14px
+    }
+
+    .stat b {
+      display: block;
+      color: var(--deep);
+      font-size: 16px
+    }
+
+    .stat span {
+      font-size: 11px;
+      color: #71879a;
+      letter-spacing: .4px
+    }
+
+    .availability {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #526c82;
+      font-size: 13px;
+      padding-top: 8px;
+      border-top: 1px solid var(--line)
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #39a56a;
+      box-shadow: 0 0 0 5px rgba(57, 165, 106, .10)
+    }
+
+    .footer {
+      background: var(--deep);
+      color: #dceafa;
+      padding: 60px 7% 28px
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px
+    }
+
+    .footer h4 {
+      color: #fff;
+      margin-bottom: 12px
+    }
+
+    .footer p {
+      color: #aac1d5;
+      font-size: 13px
+    }
+
+    .back {
+      display: inline-flex;
+      margin-top: 22px;
+      color: #a9d4f7;
+      font-size: 13px
+    }
+
+    .copyright {
+      max-width: 1180px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .12);
+      font-size: 11px;
+      color: #8da8be
+    }
+
+    @media(max-width:850px) {
+      nav {
+        height: 72px;
+        padding: 0 5%
+      }
+
+      .logo img {
+        width: 42px;
+        height: 42px
+      }
+
+      .logo strong {
+        font-size: 17px
+      }
+
+      .logo span {
+        font-size: 7px
+      }
+
+      .navlinks {
+        display: none
+      }
+
+      .menu-btn {
+        display: block
+      }
+
+      .hero {
+        min-height: 540px
+      }
+
+      .hero-content {
+        padding: 78px 7% 135px
+      }
+
+      .hero h1 {
+        font-size: 52px
+      }
+
+      .intro {
+        margin: -55px auto 0;
+        padding: 0 5%
+      }
+
+      .intro-box {
+        padding: 22px;
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .hours {
+        white-space: normal
+      }
+
+      .products {
+        padding: 0 5%;
+        margin-top: 58px
+      }
+
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .image-wrap {
+        height: 320px
+      }
+
+      .card-body {
+        padding: 23px
+      }
+
+      .card-top {
+        flex-direction: column
+      }
+
+      .price {
+        font-size: 23px
+      }
+
+      .footer-inner {
+        flex-direction: column
+      }
+    }
+
+    @media(max-width:480px) {
+      .hero h1 {
+        font-size: 45px
+      }
+
+      .hero-ar {
+        font-size: 18px
+      }
+
+      .image-wrap {
+        height: 280px
+      }
+
+      .product-title h3 {
+        font-size: 28px
+      }
+
+      .product-title .arabic {
+        font-size: 17px
+      }
+    }
+  </style>
+<body>
+<header class="hero">
+<div id="global-nav"></div> <div class="hero-content"><div class="eyebrow">DUJA • DESSERTS</div> <h1>Desserts <span class="hero-ar">الحلويات</span></h1> <p class="hero-copy">A carefully crafted selection of desserts, made to
+        bring rich flavors, smooth textures and a satisfying finish to every moment.</p> </div>
+</header><main id="desserts">
+<!-- <section class="intro">\<div><span class="kicker">SWEET COLLECTION</span>
+        <h2>Thoughtfully crafted, beautifully served.</h2>
+      </div>\n <p>حلويات متنوعة مُحضّرة بعناية — A selection of carefully crafted desserts, prepared with balanced
+        flavors and indulgent textures.</p>\n</section> -->
+<section class="products">
+<article class="card featured">
+<div class="image-wrap"><img alt="Chocolate Bar" decoding="async" loading="lazy" src="/images/chocolate-bar.jpg"/><span class="price">7.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">01</div>
+<h3>Chocolate Bar <span>| بار شوكولاتة</span></h3>
+<p>Rich chocolate with a refreshing and balanced pomegranate touch.</p>
+<p class="ar" dir="rtl">شوكولاتة غنية بلمسة رمان منعشة ومتوازنة.</p>
+<div class="flavors">
+<div><b>Pomegranate</b><span dir="rtl">رمان</span><em>Refreshing and balanced pomegranate touch.</em></div>
+<div><b>Dark Chocolate</b><span dir="rtl">شوكولاتة داكنة</span><em>Rich flavor with a smooth texture.</em>
+</div>
+<div><b>Caramel Pecan</b><span dir="rtl">بيكان كراميل</span><em>Smooth caramel with toasted pecans.</em>
+</div>
+</div>
+</div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Chocolate Brownie" decoding="async" loading="lazy" src="/images/chocolate-brownie.jpg"/><span class="price">13.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">02</div>
+<h3>Chocolate Brownie <span>| براوني شوكولاتة</span></h3>
+<p>Rich chocolate brownie with a crispy biscuit base and a soft, fudgy center, finished with a touch of salt
+            to balance the sweetness.</p>
+<p class="ar" dir="rtl">براوني غني بالشوكولاتة، بطبقة سفلية مقرمشة من البسكويت، وقلب طري وفادج، مع لمسة من
+            الملح لموازنة الحلاوة.</p>
+</div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Madrid Cheesecake" decoding="async" loading="lazy" src="/images/madrid-cheesecake.jpg"/><span class="price">25.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">03</div>
+<h3>Madrid Cheesecake <span>| تشيز كيك مدريد</span></h3>
+<p>Creamy and rich cheesecake infused with natural vanilla flavor.</p>
+<p class="ar" dir="rtl">تشيز كيك كريمي وغني بنكهة الفانيلا الطبيعية.</p>
+</div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="New York Cookies" decoding="async" loading="lazy" src="/images/new-york-cookies.jpg"/><span class="price">12.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">04</div>
+<h3>New York Cookies <span>| كوكيز نيويورك</span></h3>
+<p>Freshly baked cookies, soft and chewy in the center with chocolate and pecan filling, finished with crispy
+            edges.</p>
+<p class="ar" dir="rtl">كوكيز طازج، طري من الداخل مع حشوة الشوكولاتة والبيكان، مع قرمشة لذيذة على الأطراف.</p>
+</div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Pecan Tart" decoding="async" loading="lazy" src="/images/pecan-tart.jpg"/><span class="price">13.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">05</div>
+<h3>Pecan Tart <span>| تارت البيكان</span></h3>
+<p>A crispy tart filled with pecans and caramel, featuring a rich and indulgent layer.</p>
+<p class="ar" dir="rtl">تارت مقرمش بحشوة البيكان والكراميل، بطبقة غنية وشهية.</p>
+</div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Crunchy Caramel" decoding="async" loading="lazy" src="/images/crunchy-caramel.jpg"/><span class="price">10.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">06</div>
+<h3>Crunchy Caramel <span>| كراميل كرانشي</span></h3>
+<p>Crunchy chocolate filled with caramel, finished with a sprinkle of salt for a perfectly balanced flavor.
+          </p>
+<p class="ar" dir="rtl">شوكولاتة كرانشي محشوة بالكراميل، مع رشة من الملح تمنح النكهة توازنًا واضحًا.</p>
+</div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Caramel Pudding" decoding="async" loading="lazy" src="/images/caramel-pudding.jpg"/><span class="price">21.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">07</div>
+<h3>Caramel Pudding <span>| بودينغ كراميل</span></h3>
+<p>Layers of tiramisu biscuits with a rich caramel layer, offering a delicious and well-balanced flavor.</p>
+<p class="ar" dir="rtl">طبقات من بسكويت التيراميسو مع طبقة كراميل غنية، بنكهة لذيذة ومتوازنة.</p>
+</div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Chocolate Pudding" decoding="async" loading="lazy" src="/images/chocolate-pudding.jpg"/><span class="price">21.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">08</div>
+<h3>Chocolate Pudding <span>| بودينغ شوكولاتة</span></h3>
+<p>Layers of rich chocolate cake filled with a delicious crunchy layer.</p>
+<p class="ar" dir="rtl">طبقات من كيك الشوكولاتة الغني، محشوة بطبقة كرانشي لذيذة.</p>
+</div>
+</article>
+<article class="card">
+<div class="image-wrap"><img alt="Family Madrid Cheesecake" decoding="async" loading="lazy" src="/images/family-madrid-cheesecake.jpg"/><span class="price">20.00 <small>SAR</small></span></div>
+<div class="card-body">
+<div class="num">09</div>
+<h3>Family Madrid Cheesecake <span>| تشيز كيك مدريد عائلي</span></h3>
+<p>Madrid Cheesecake in a generous family size, perfect for sharing and gatherings.</p>
+<p class="ar" dir="rtl">تشيز كيك مدريد بحجم عائلي، مثالي للمشاركة ولمّتكم.</p>
+</div>
+</article>
+</section></main><div id="global-footer"></div>
+
+<style>
+    .intro {
+      max-width: 1180px;
+      margin: auto;
+      padding: 78px 7% 38px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 55px;
+      align-items: end
+    }
+
+    .kicker {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--blue);
+      font-weight: 800;
+      text-transform: uppercase
+    }
+
+    .intro h2 {
+      font: 600 clamp(36px, 5vw, 64px)/1.02 Georgia, serif;
+      color: var(--deep);
+      margin-top: 12px
+    }
+
+    .intro p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8
+    }
+
+    .intro .ar {
+      display: block;
+      margin-top: 8px;
+      color: #5d7893;
+      font-size: 17px
+    }
+
+    .products {
+      max-width: 1180px;
+      margin: auto;
+      padding: 25px 7% 100px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 14px 40px rgba(11, 43, 77, .07);
+      transition: .3s
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(11, 43, 77, .13)
+    }
+
+    .image-wrap {
+      height: 320px;
+      background: #eaf3fb;
+      position: relative;
+      overflow: hidden
+    }
+
+    .image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .6s ease
+    }
+
+    .card:hover .image-wrap img {
+      transform: scale(1.035)
+    }
+
+    .price {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      background: #fff;
+      color: var(--deep);
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .12)
+    }
+
+    .price small {
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: var(--blue)
+    }
+
+    .card-body {
+      padding: 26px 27px 30px
+    }
+
+    .num {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #8aa0b5;
+      margin-bottom: 9px;
+      font-weight: 800
+    }
+
+    .card h3 {
+      font: 700 27px/1.15 Georgia, serif;
+      color: var(--deep);
+      margin-bottom: 13px
+    }
+
+    .card h3 span {
+      font: 500 16px/1.4 Arial, sans-serif;
+      color: #66819b
+    }
+
+    .card p {
+      color: #536b82;
+      font-size: 15px;
+      line-height: 1.75
+    }
+
+    .card .ar {
+      margin-top: 8px;
+      color: #61798e;
+      direction: rtl;
+      text-align: right
+    }
+
+    .featured {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1.05fr 1fr
+    }
+
+    .featured .image-wrap {
+      height: 100%;
+      min-height: 455px
+    }
+
+    .flavors {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 11px;
+      margin-top: 20px
+    }
+
+    .flavors div {
+      background: #f5f9fd;
+      border: 1px solid #e0ebf5;
+      border-radius: 16px;
+      padding: 14px
+    }
+
+    .flavors b,
+    .flavors span,
+    .flavors em {
+      display: block
+    }
+
+    .flavors b {
+      font-size: 12px;
+      color: var(--deep)
+    }
+
+    .flavors span {
+      font-size: 12px;
+      color: var(--blue);
+      margin-top: 3px
+    }
+
+    .flavors em {
+      font-size: 11px;
+      color: #71879a;
+      margin-top: 6px;
+      font-style: normal;
+      line-height: 1.5
+    }
+
+    footer {
+      background: linear-gradient(180deg, #0f3f6e, #0b2b4d);
+      color: #fff;
+      padding: 38px 7%
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .footer-inner strong {
+      font-size: 22px;
+      letter-spacing: 2px
+    }
+
+    .footer-inner p {
+      color: #bdd1e2;
+      font-size: 13px;
+      margin-top: 4px
+    }
+
+    .footer-inner a {
+      border: 1px solid rgba(255, 255, 255, .3);
+      padding: 10px 17px;
+      border-radius: 999px
+    }
+
+    .footer-inner a:hover {
+      background: #fff;
+      color: var(--deep)
+    }
+
+    @media(max-width:850px) {
+      .navlinks {
+        display: none
+      }
+
+      .menu-btn {
+        display: block
+      }
+
+      .hero-content {
+        padding-top: 65px
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding-top: 55px
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+        padding: 20px 5% 80px
+      }
+
+      .featured {
+        grid-column: span 1;
+        display: block
+      }
+
+      .featured .image-wrap {
+        min-height: 320px;
+        height: 320px
+      }
+
+      .flavors {
+        grid-template-columns: 1fr
+      }
+
+      .card h3 {
+        font-size: 24px
+      }
+
+      .card-body {
+        padding: 23px 21px 26px
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px
+      }
+    }
+    
+  </style>
+
+<script src="../components.js"></script></body>
+</head></html>
